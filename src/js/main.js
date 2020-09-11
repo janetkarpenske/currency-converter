@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/styles.css';
-import { handleConversions } from './conversions.js';
+import { handleConversionsm, calcConversion } from './conversions.js';
 
 // function displayConv(dollars, convCurr, currType) {
 //   $("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + ".");
@@ -15,7 +15,7 @@ $(document).ready(function() {
     const currType = $("#currType").val();
     console.log(dollars, currType);
 
-    let convResult = handleConversions(dollars, currType, result);
+    let convResult = handleConversions(dollars, currType);
     console.log("This is the final result: " + convResult);
   });
 });
