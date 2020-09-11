@@ -7,8 +7,10 @@ import { ConverterService, calcConversion } from './conv-service.js';
 function displayConv(dollars, convCurr, currType) {
   if (convCurr.length > 30) {
     $("#results").html(convCurr);
-  }
-  $("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + ".");
+  } else {
+  //$("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + "."); }
+  $("#results").html("$" + dollars)
+  $("#resultsTwo").html(convCurr + " " + currType + "."); }
 }
 $(document).ready(function() { 
   $("#form").submit(function(event) {
