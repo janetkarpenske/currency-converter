@@ -1,7 +1,7 @@
 h1 {
   text-align: center;
-  font-family: 'Kristi', cursive;
-  font-size: 120px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 80px;
 }
 #form {
   margin-top: 40px;
@@ -27,4 +27,8 @@ body {
   background-color: white;
   padding: 60px;
   padding-bottom: 300px;
+  border: double black;
+  border-width: 8px;
+  border-top: none;
+  border-bottom: none;
 }
