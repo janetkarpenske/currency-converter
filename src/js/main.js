@@ -15,7 +15,7 @@ $(document).ready(function() {
     const currType = $("#currType").val();
     console.log(dollars, currType);
 
-    let convResult = handleConversions(dollars, currType);
-    console.log("This is the final result: " + result);
+    let convResult = handleConversions(dollars, currType, result);
+    console.log("This is the final result: " + convResult);
   });
 });
