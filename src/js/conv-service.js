@@ -38,6 +38,12 @@ export function calcConversion(dollars, currType, conversions) {
   else if (currType === "ISK") {
     result = (dollars * conversions.ISK).toFixed(2);
   }
+  else if (currType === "GBP") {
+    result = (dollars * conversions.GBP).toFixed(2);
+  }
+  else if (currType === "JPY") {
+    result = (dollars * conversions.JPY).toFixed(2);
+  }
   else if (currType) {
     result = "Sorry, this type of currency is not supported in this program.";
   }

@@ -8,13 +8,17 @@ function displayConv(dollars, convCurr, currType) {
   if (convCurr.length > 30) {
     $("#results").html(convCurr);
   } else {
-  $("#results").html("$" + dollars)
+  $("#results").html("$" + dollars);
   $("#resultsTwo").html(convCurr + " " + currType + "."); }
 }
 $(document).ready(function() { 
   $("#form").submit(function(event) {
     event.preventDefault();
     const dollars = parseFloat($("#dollars").val());
+    if (!dollars) {
+      alert("Please enter a valid number.");
+      return false;
+    }
     const currType = $("#currType").val();
     let promise = ConverterService.getExchange();
     promise.then(function(response) {
@@ -23,8 +27,7 @@ $(document).ready(function() {
       console.log(conversions);
       let result = calcConversion(dollars, currType, conversions);
       displayConv(dollars, result, currType);
-      }
-    , function(error) {
+      }, function(error) {
       $("#results").html(`There was an error processing your request: ${error}`);
     });
   });

@@ -1,6 +1,5 @@
 h1 {
   text-align: center;
-  margin-top: 20px;
   font-family: 'Kristi', cursive;
   font-size: 120px;
 }
@@ -23,4 +22,9 @@ img {
 }
 body {
   background-color: rgb(224, 242, 250);
+}
+.container {
+  background-color: white;
+  padding: 60px;
+  padding-bottom: 300px;
 }
