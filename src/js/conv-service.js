@@ -33,7 +33,7 @@ export function calcConversion(dollars, currType, conversions) {
     result = (dollars * conversions.PEN).toFixed(2);
   }
   else if (currType) {
-    result = "Sorry, this type of currency is not supported in this program."
+    result = "Sorry, this type of currency is not supported in this program.";
   }
   return result;
 }
