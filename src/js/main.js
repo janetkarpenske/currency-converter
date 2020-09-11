@@ -8,7 +8,6 @@ function displayConv(dollars, convCurr, currType) {
   if (convCurr.length > 30) {
     $("#results").html(convCurr);
   } else {
-  //$("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + "."); }
   $("#results").html("$" + dollars)
   $("#resultsTwo").html(convCurr + " " + currType + "."); }
 }

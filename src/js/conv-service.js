@@ -32,6 +32,12 @@ export function calcConversion(dollars, currType, conversions) {
   else if (currType === "PEN") {
     result = (dollars * conversions.PEN).toFixed(2);
   }
+  else if (currType === "HRK") {
+    result = (dollars * conversions.HRK).toFixed(2);
+  }
+  else if (currType === "ISK") {
+    result = (dollars * conversions.ISK).toFixed(2);
+  }
   else if (currType) {
     result = "Sorry, this type of currency is not supported in this program.";
   }
