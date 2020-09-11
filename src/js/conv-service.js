@@ -1,0 +1,1 @@
+// https://v6.exchangerate-api.com/INSERTAPIKEY/latest/USD
