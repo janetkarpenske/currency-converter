@@ -10,6 +10,7 @@ function displayConv(dollars, convCurr, currType) {
   } else {
   $("#results").html("$" + dollars);
   $("#resultsTwo").html(convCurr + " " + currType + "."); }
+  $("#resultsDiv").show();
 }
 $(document).ready(function() { 
   $("#form").submit(function(event) {

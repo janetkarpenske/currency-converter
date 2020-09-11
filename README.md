@@ -9,7 +9,7 @@
 This program will take a number dollar amount input from the user and convert it into other currencies.
 
 ## Link To Active Site:
-https://janetkarpenske.github.io/currency-converter/
+Not Applicable
 
 ## Specifications
 |Description | Input Example | Output |

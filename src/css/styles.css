@@ -13,15 +13,14 @@ img {
   object-fit: cover;
 }
 #results, #resultsTwo {
-  margin-top: 20px;
   font-size: 25px;
 }
 #results {
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 body {
-  background-color: rgb(224, 242, 250);
+  background-color: rgb(224, 255, 253);
 }
 .container {
   background-color: white;
@@ -31,4 +30,10 @@ body {
   border-width: 8px;
   border-top: none;
   border-bottom: none;
+}
+#resultsDiv {
+  display: none;
+}
+h4 {
+  margin-top: 20px;
 }
