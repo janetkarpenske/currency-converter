@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Kristi&display=swap" rel="stylesheet">
   <title>Currency Converter</title>
 </head>
 <body>
   <div class="container">
-    <h1>World's Best Currency Converter</h1>
+    <h1>Global Currency Converter</h1>
+    <img src="./assets/img/money.jpg">
     <form id="form">
       <div class="form-group">
         <label for="dollars">Enter US $</label>
@@ -13,11 +15,11 @@
       <div class="form-group">
         <label for="currType">What currency would you like this converted to?</label>
         <select class="form-control" id="currType">
-          <option>Euro</option>
-          <option>Australian Dollar</option>
-          <option>South Korean Won</option>
-          <option>Mexican Peso</option>
-          <option>Peruvian Sol</option>
+          <option value="EUR">Euro</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="KRW">South Korean Won</option>
+          <option value="MXN">Mexican Peso</option>
+          <option value="PEN">Peruvian Sol</option>
         </select>
       </div>
       <button type="submit" class="btn btn-info">Convert</button>

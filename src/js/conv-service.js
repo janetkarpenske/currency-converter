@@ -17,20 +17,23 @@ export class ConverterService {
 }
 export function calcConversion(dollars, currType, conversions) {
   let result;
-  if (currType === "Euro") {
-    result = dollars * conversions.EUR
+  if (currType === "EUR") {
+    result = (dollars * conversions.EUR).toFixed(2);
   }
-  if (currType === "Australian Dollar") {
-    result = dollars * conversions.AUD
+  else if (currType === "AUD") {
+    result = (dollars * conversions.AUD).toFixed(2);
   }
-  if (currType === "South Korean Won") {
-    result = dollars * conversions.KRW
+  else if (currType === "KRW") {
+    result = (dollars * conversions.KRW).toFixed(2);
   }
-  if (currType === "Mexican Peso") {
-    result = dollars * conversions.MXN
+  else if (currType === "MXN") {
+    result = (dollars * conversions.MXN).toFixed(2);
   }
-  if (currType === "Peruvian Sol") {
-    result = dollars * conversions.PEN
+  else if (currType === "PEN") {
+    result = (dollars * conversions.PEN).toFixed(2);
+  }
+  else if (currType) {
+    result = "Sorry, this type of currency is not supported in this program."
   }
   return result;
 }
