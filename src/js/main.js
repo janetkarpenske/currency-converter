@@ -2,20 +2,25 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './../css/styles.css';
-import { handleConversionsm, calcConversion } from './conversions.js';
+import { ConverterService, calcConversion } from './conv-service.js';
 
-// function displayConv(dollars, convCurr, currType) {
-//   $("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + ".");
-// }
-
+function displayConv(dollars, convCurr, currType) {
+  $("#results").html("$" + dollars + " is equal to " + convCurr + " " + currType + ".");
+}
 $(document).ready(function() { 
   $("#form").submit(function(event) {
     event.preventDefault();
     const dollars = parseInt($("#dollars").val());
     const currType = $("#currType").val();
-    console.log(dollars, currType);
-
-    let convResult = handleConversions(dollars, currType);
-    console.log("This is the final result: " + convResult);
+    let promise = ConverterService.getExchange();
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+      let conversions = body.conversion_rates;
+      let result = calcConversion(dollars, currType, conversions);
+      displayConv(dollars, result, currType);
+      }
+    , function(error) {
+      $("#results").html(`There was an error processing your request: ${error}`);
+    });
   });
 });
